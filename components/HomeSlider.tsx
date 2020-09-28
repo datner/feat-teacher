@@ -60,7 +60,7 @@ function HomeSlider(props: Props) {
             {times(children, (i) => {
               const [father, son] = dotClasses(i, current, offset);
               return (
-                <div className={father} style={dotStyle}>
+                <div key={i} className={father} style={dotStyle}>
                   <div key={i} className={son} onClick={handleClick(i)}></div>
                 </div>
               );
